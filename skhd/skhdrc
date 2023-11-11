@@ -1,0 +1,15 @@
+# cmd - h : yabai -m space --focus prev
+# cmd - l : yabai -m space --focus next
+
+# Disable quit shortcut in VSCode
+cmd - q [
+  "code": : :
+]
+
+# Switch spaces
+cmd - u : yabai -m space --focus 1
+cmd - i : yabai -m space --focus 2
+cmd - j : yabai -m space --focus 3
+cmd - k : yabai -m space --focus 4
+cmd - l : yabai -m space --focus 5
+cmd - o : yabai -m space --focus 6
