@@ -483,6 +483,8 @@ require("flutter-tools").setup {
     }
   }
 }
+-- TODO: this probably doesn't belong here
+vim.keymap.set('n', '<leader><C-r>', vim.cmd.FlutterRestart)
 
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`

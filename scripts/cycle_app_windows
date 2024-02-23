@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+focus="$(yabai -m query --windows | \
+    jq -e --argjson pos 1 '(.[] | select(."has-focus")) as {$id, $app}
+    | map( select( .app==$app and ((."is-hidden" or ."is-minimized") | not) ) )
+    | sort_by(.space, .frame.x, .frame.y)
+    | map(.id)
+    | .[(index($id)+($pos))%length]'
+)"
+
+yabai -m window --focus "$focus"

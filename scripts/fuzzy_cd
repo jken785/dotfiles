@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+selected=$(find ~/.config ~/dev -mindepth 1 -maxdepth 5 -name '.git' -prune -o -type d -print | fzf)
+
+if [[ -n $selected ]]; then
+    cd "$selected"
+fi
